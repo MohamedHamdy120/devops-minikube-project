@@ -25,7 +25,7 @@ jobs:
           IMAGE_NAME=ghcr.io/mohamedhamdy120/devops-pipeline-app
           TAG=${{ github.sha }}
 
-          docker build -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest .
+          docker build -f app/Dockerfile -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest app
 
       - name: Push Docker image
         run: |
