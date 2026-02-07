@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          IMAGE_NAME=ghcr.io/MohamedHamdy120/devops-pipeline-app
+          IMAGE_NAME=ghcr.io/mohamedhamdy120/devops-pipeline-app
           TAG=${{ github.sha }}
 
           docker build -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest .
