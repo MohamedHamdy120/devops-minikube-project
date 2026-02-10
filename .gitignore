@@ -3,3 +3,4 @@ npm-debug.log
 .env
 .terraform/
 terraform.tfstate
+terraform/terraform.tfstate.*
