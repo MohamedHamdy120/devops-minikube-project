@@ -4,7 +4,7 @@ metadata:
   name: devops-minikube-ingress
 spec:
   rules:
-    - host: devops-gitops.local
+    - host: devops-prod.local
       http:
         paths:
           - path: /
