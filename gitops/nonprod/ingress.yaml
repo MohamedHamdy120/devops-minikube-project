@@ -4,13 +4,13 @@ metadata:
   name: devops-minikube-ingress
 spec:
   rules:
-    - host: devops-gitops.local
+    - host: devops-nonprod.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: devops-nonprod.local
+                name: devops-minikube-service
                 port:
                   number: 80
