@@ -15,7 +15,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
+      - name: Install dependencies and run lint
+        working-directory: app
+        run: |
+          npm ci || npm install
+          npm run lint
+    
       - name: Log in to GitHub Container Registry
         run: |
           echo "${{ github.token }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
