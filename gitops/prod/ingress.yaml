@@ -11,6 +11,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: devops-prod.local
+                name: devops-minikube-service
                 port:
                   number: 80
