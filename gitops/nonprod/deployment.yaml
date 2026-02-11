@@ -16,6 +16,12 @@ spec:
     spec:
       containers:
 
+        - name: devops-minikube-app
+          image: devops-minikube-app:v2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          
           readinessProbe:
             httpGet:
               path: /
@@ -30,11 +36,7 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 10
 
-        - name: devops-minikube-app
-          image: devops-minikube-app:v2
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 3000
+
           env:
             - name: PORT
               value: "3000"
