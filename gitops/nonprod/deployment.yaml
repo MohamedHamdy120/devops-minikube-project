@@ -17,7 +17,7 @@ spec:
       containers:
 
         - name: devops-minikube-app
-          image: ghcr.io/mohamedhamdy120/devops-minikube-app:aeba44f8c2b4103fcf746ac09f9691ec6f620370
+          image: ghcr.io/mohamedhamdy120/devops-pipeline-app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
