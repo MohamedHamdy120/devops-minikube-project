@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello from DevOps Minikube project v3',
+    message: 'Hello from NONPROD via GitOps ✅ v4',
   });
 });
 
